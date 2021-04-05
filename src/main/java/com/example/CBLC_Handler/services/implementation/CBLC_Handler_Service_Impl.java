@@ -3,6 +3,7 @@ package com.example.CBLC_Handler.services.implementation;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.CopyObjectResult;
 import com.example.CBLC_Handler.config.S3config;
+import com.example.CBLC_Handler.repository.FileRepository;
 import com.example.CBLC_Handler.services.CBLC_Handler_Service;
 import com.example.CBLC_Handler.services.helpers.Notifiers;
 import lombok.extern.slf4j.Slf4j;
@@ -19,9 +20,29 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
     @Autowired
     private Notifiers notifier;
 
+    @Autowired
+    FileRepository fileRepository;
+
     @Override
-    public void start_Process() {
-        
+    public void start_Process(String filePath, int stage) {
+        String orinialFilePath = "s3://";
+        upload_File_In_S3(filePath, orinialFilePath);
+        int total_row_count = totalRowCountFinder(filePath);
+        float temporary_part_count = total_row_count/500;
+        int numberOfParts = total_row_count/500;
+        if(temporary_part_count!=numberOfParts) numberOfParts+=numberOfParts;
+
+        //create Input_File object
+
+//        fileRepository.save(Input_File_Obj);
+//        fileBreaker();
+    }
+
+    int totalRowCountFinder(String filePath)
+    {
+        int totalRows=0;
+        //code
+        return totalRows;
     }
 
     void upload_File_In_S3(String filePath, String s3BucketPath)

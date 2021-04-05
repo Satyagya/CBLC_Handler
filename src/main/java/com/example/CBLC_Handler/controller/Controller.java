@@ -12,10 +12,10 @@ public class Controller {
     private CBLC_Handler_Service cblc_handler_service;
 
 
-    //TO GET FILE FROM THE UI UPLOAD//
-    @PostMapping(value = "/uploadnewfile")
-    void uplaod_New_File(@RequestParam(value = "filePath") String filePath)
+    //TO GET FILE FROM THE UI {Initial Stage 0}
+    @PostMapping(value = "/uploadNewFile")
+    void uplaod_New_File(@RequestParam(value = "filePath") String filePath, int stage)
     {
-        cblc_handler_service.start_Process();
+        cblc_handler_service.start_Process(filePath,stage);
     }
 }
