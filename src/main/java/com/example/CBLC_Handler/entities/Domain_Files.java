@@ -30,4 +30,35 @@ public class Domain_Files {
     @Column(name = "DG_STATUS")
     private String dg_Status;
 
+    public Integer getId3() {
+        return id3;
+    }
+
+    public void setId3(Integer id3) {
+        this.id3 = id3;
+    }
+
+    public Integer getId2() {
+        return id2;
+    }
+
+    public void setId2(Integer id2) {
+        this.id2 = id2;
+    }
+
+    public String getDomainNF_FileName_With_Part() {
+        return domainNF_FileName_With_Part;
+    }
+
+    public void setDomainNF_FileName_With_Part(String domainNF_FileName_With_Part) {
+        this.domainNF_FileName_With_Part = domainNF_FileName_With_Part;
+    }
+
+    public String getDg_Status() {
+        return dg_Status;
+    }
+
+    public void setDg_Status(String dg_Status) {
+        this.dg_Status = dg_Status;
+    }
 }

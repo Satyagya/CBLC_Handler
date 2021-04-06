@@ -42,4 +42,67 @@ public class Parts_Of_Input_Files {
     @Column(name = "OUTPUT_FILENAME_WITH_PART")
     private String output_FileName_With_Part;
 
+    public Integer getId2() {
+        return id2;
+    }
+
+    public void setId2(Integer id2) {
+        this.id2 = id2;
+    }
+
+    public Integer getId1() {
+        return id1;
+    }
+
+    public void setId1(Integer id1) {
+        this.id1 = id1;
+    }
+
+    public String getInput_FileName_With_part() {
+        return input_FileName_With_part;
+    }
+
+    public void setInput_FileName_With_part(String input_FileName_With_part) {
+        this.input_FileName_With_part = input_FileName_With_part;
+    }
+
+    public String getLc_Status() {
+        return lc_Status;
+    }
+
+    public void setLc_Status(String lc_Status) {
+        this.lc_Status = lc_Status;
+    }
+
+    public String getDc_Status() {
+        return dc_Status;
+    }
+
+    public void setDc_Status(String dc_Status) {
+        this.dc_Status = dc_Status;
+    }
+
+    public String getEg_Found_Status() {
+        return eg_Found_Status;
+    }
+
+    public void setEg_Found_Status(String eg_Found_Status) {
+        this.eg_Found_Status = eg_Found_Status;
+    }
+
+    public String getEg_NotFound_Status() {
+        return eg_NotFound_Status;
+    }
+
+    public void setEg_NotFound_Status(String eg_NotFound_Status) {
+        this.eg_NotFound_Status = eg_NotFound_Status;
+    }
+
+    public String getOutput_FileName_With_Part() {
+        return output_FileName_With_Part;
+    }
+
+    public void setOutput_FileName_With_Part(String output_FileName_With_Part) {
+        this.output_FileName_With_Part = output_FileName_With_Part;
+    }
 }

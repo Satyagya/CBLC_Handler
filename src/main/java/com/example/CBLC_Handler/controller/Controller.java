@@ -16,8 +16,9 @@ public class Controller {
     @PostMapping(value = "/uploadnewfile")
     void uplaod_New_File()
     {
-        //@RequestParam("inputFilePath") String inputFilePath
+        //@RequestParam("inputFilePath") String inputFilePath , int stage
         String inputFilePath = "";
-        cblc_handler_service.start_Process(inputFilePath);
+        int stage = 6; //default
+        cblc_handler_service.start_Process(inputFilePath, stage);
     }
 }

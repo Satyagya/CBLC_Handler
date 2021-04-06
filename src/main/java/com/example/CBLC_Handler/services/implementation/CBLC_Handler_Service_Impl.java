@@ -31,53 +31,61 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
 
 //    @Autowired
 //    private Notifiers notifier;
+//
+//    @Value("${aws.bucket.input.file}")
+//    private String awsBucketInputFile;
 
     @Autowired
     private Input_FilesRepository input_filesRepository;
 
-//    @Value("${aws.bucket.input.file}")
-//    private String awsBucketInputFile;
+    @Autowired
+    private Stage_0_Impl stage0;
+
 
     @Override
-    public void start_Process(String inputFilePath) {
-
+    public void start_Process(String inputFilePath, int stage) {
         try
         {
-            //upload_File_In_S3(inputFilePath, awsBucketInputFile);
+            file_name_formater(inputFilePath);
 
-            store_FileName_In_Input_Files_Table(inputFilePath);
-
-            divide_FileInParts_Store_InS3And_PartsOfInputFiles(inputFilePath);
-
+            String awsBucketInputFile="";
+            upload_File_In_S3(inputFilePath, awsBucketInputFile);
+            store_FileName_In_Input_Files_Table(inputFilePath, stage);
+            stage0.divide_FileInParts_Store_InS3And_PartsOfInputFiles(inputFilePath);
         }
         catch(Exception e)
         {
-            System.out.println("sorry");
+            System.out.println("File Uploading Failed...");
         }
-        
+    }
+
+    void file_name_formater(String inputFilePath)
+    {
+
     }
 
 
-    void store_FileName_In_Input_Files_Table(String inputFilePath)
+    void store_FileName_In_Input_Files_Table(String inputFilePath, int stage)
     {
-        String fileName = get_fileName(inputFilePath);
-        Integer noOfParts = get_noOfParts(inputFilePath);
+        String fileName = get_FileName(inputFilePath);
+        Integer noOfParts = get_NoOfParts(inputFilePath);
         Input_Files input_file = new Input_Files();
         input_file.setInput_FileName(fileName);
         input_file.setNo_Of_Parts(noOfParts);
         input_file.setStage(0);
-        input_file.setStage_Required(6);
+        input_file.setStage_Required(stage);
         input_file.setUpload_Date(LocalDateTime.now().toString());
         input_filesRepository.save(input_file);
     }
 
-    String get_fileName(String inputFilePath)
+    String get_FileName(String inputFilePath)
     {
         String[] partsOfPath = inputFilePath.split("/");
+        //FORMAT FOR FILE NAME????
         return partsOfPath[partsOfPath.length-1];
     }
 
-    Integer get_noOfParts(String inputFilePath)
+    Integer get_NoOfParts(String inputFilePath)
     {
         Integer rows = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath))) {
@@ -87,68 +95,6 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
         }
         return ((rows/ROWS_IN_ONE_PART)+1);
     }
-
-    void divide_FileInParts_Store_InS3And_PartsOfInputFiles(String inputFilePath)
-    {
-        List<String[]> rowsList = new ArrayList<>();
-        try {
-            FileReader fileReader = new FileReader(inputFilePath);
-            CSVReader csvReader = new CSVReader(fileReader);
-            String[] nextRecord;
-            int count = 0;
-            int partNo = 1;
-            while ((nextRecord = csvReader.readNext()) != null) {
-                rowsList.add(nextRecord);
-                count++;
-                if( (count % ROWS_IN_ONE_PART) == 0 )
-                {
-                    store_Part_In_S3_And_PartsOfInputFiles(rowsList, inputFilePath, partNo++);
-                    rowsList.clear();
-                }
-            }
-            if(rowsList.isEmpty()==false)
-            {
-                store_Part_In_S3_And_PartsOfInputFiles(rowsList,inputFilePath,partNo);
-            }
-
-        } catch (IOException e) {
-            log.error("Error occurred while making parts of the file: "+e.toString());
-            //notifier.notifySlack("Error occurred while checking duplicates: "+e.toString());
-        }
-
-
-    }
-
-
-
-    void store_Part_In_S3_And_PartsOfInputFiles(List<String[]> rowsList, String inputFilePath, int partNo)
-    {
-        try
-        {
-            FileWriter partFile = new FileWriter(pathToSavePartFile + "/p" + partNo + "_" + get_fileName(inputFilePath) );
-            CSVWriter writer = new CSVWriter(partFile);
-            String[] header = {"NAME", "WEBSITE", "PROFILE_URL", "FIRST_NAME", "LAST_NAME", "MATCH_DESIGNATION", "EMAIL_ID"};
-            writer.writeNext(header);
-
-            int countOfRows =0;
-            for (String[] nextRecord : rowsList)
-            {
-                //[] row = {nextRecord[0], nextRecord[1], nextRecord[2], nextRecord[3], nextRecord[4], nextRecord[5]};
-                writer.writeNext(nextRecord);
-                countOfRows++;
-            }
-            System.out.println("rows inserted in the part file {}"+ countOfRows);
-            upload_File_In_S3()
-
-        }
-        catch(Exception e)
-        {
-            System.out.println("Error while making part of the file");
-        }
-
-
-    }
-
 
     void upload_File_In_S3(String filePath, String s3BucketPath)
     {
