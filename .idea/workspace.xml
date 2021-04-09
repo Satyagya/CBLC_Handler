@@ -5,27 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dea82ef3-f3b2-4a0c-a32b-368e5b0a5d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/EmailGen_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/Stage_0_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/Stage_1_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/Stage_2_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/Stage_3_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/Stage_4_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/Stage_5_Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/EmailGenImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_0_Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_1_Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_2_Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_3_Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_4_Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_5_Impl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_60_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava3_rxjava_3_0_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_cache_cache_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_2_0_11_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_river_2_0_11_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_bean_5_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_core_5_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_15_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/FileNameFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/Notifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/S3_Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CBLC_Handler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CBLC_Handler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Domain_Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Domain_Files.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Input_Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Input_Files.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Parts_Of_Input_Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Parts_Of_Input_Files.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/CBLC_Handler_Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/CBLC_Handler_Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/Notifiers.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/CBLC_Handler_Service_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/CBLC_Handler_Service_Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_0_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_0_Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_1_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_1_Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,6 +64,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">

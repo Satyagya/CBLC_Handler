@@ -1,9 +1,11 @@
 package com.example.CBLC_Handler.services.implementation;
 
 import com.example.CBLC_Handler.services.Stage_0_Service;
+import com.example.CBLC_Handler.services.helpers.S3_Functions;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.amazonaws.services.s3.AmazonS3;
 import com.example.CBLC_Handler.entities.Input_Files;
@@ -20,6 +22,9 @@ import static com.example.CBLC_Handler.constants.Constants.*;
 @Slf4j
 @Service
 public class Stage_0_Impl implements Stage_0_Service {
+
+    @Autowired
+    S3_Functions s3_functions;
 
     void divide_FileInParts_Store_InS3And_PartsOfInputFiles(String inputFilePath)
     {
@@ -52,13 +57,14 @@ public class Stage_0_Impl implements Stage_0_Service {
 
     }
 
-
-
     void store_Part_In_S3_And_PartsOfInputFiles(List<String[]> rowsList, String inputFilePath, int partNo)
     {
         try
         {
-            FileWriter partFile = new FileWriter(pathToSavePartFile + "/p" + partNo + "_" + get_FileName(inputFilePath) );
+            String updatedFileName = get_FileName(inputFilePath);
+            updatedFileName = updatedFileName + "_P" + String.valueOf(partNo);
+
+            FileWriter partFile = new FileWriter(updatedFileName);
             CSVWriter writer = new CSVWriter(partFile);
             String[] header = {"NAME", "WEBSITE", "PROFILE_URL", "FIRST_NAME", "LAST_NAME", "MATCH_DESIGNATION", "EMAIL_ID"};
             writer.writeNext(header);
@@ -71,7 +77,8 @@ public class Stage_0_Impl implements Stage_0_Service {
                 countOfRows++;
             }
             System.out.println("rows inserted in the part file {}"+ countOfRows);
-            //upload_File_In_S3();
+
+            s3_functions.upload_File_In_S3("","");
 
         }
         catch(Exception e)
