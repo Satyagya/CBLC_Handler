@@ -31,12 +31,11 @@ public class Input_Files {
     @Column(name = "NO_OF_PARTS")
     private Integer no_Of_Parts;
 
-    @Column(name = "STAGE")
-    private  Integer stage;
+    @Column(name = "START_STAGE")
+    private  Integer stage_start;
 
-    @Column(name = "STAGE_REQUIRED")
-    private Integer stage_Required;
-
+    @Column(name = "END_STAGE")
+    private  Integer stage_end;
 
     @Column(name = "UPLOAD_DATE")
     private String upload_Date;
@@ -76,20 +75,20 @@ public class Input_Files {
         this.no_Of_Parts = no_Of_Parts;
     }
 
-    public Integer getStage() {
-        return stage;
+    public Integer getStage_start() {
+        return stage_start;
     }
 
-    public void setStage(Integer stage) {
-        this.stage = stage;
+    public void setStage_start(Integer stage_start) {
+        this.stage_start = stage_start;
     }
 
-    public Integer getStage_Required() {
-        return stage_Required;
+    public Integer getStage_end() {
+        return stage_end;
     }
 
-    public void setStage_Required(Integer stage_Required) {
-        this.stage_Required = stage_Required;
+    public void setStage_end(Integer stage_end) {
+        this.stage_end = stage_end;
     }
 
     public String getUpload_Date() {

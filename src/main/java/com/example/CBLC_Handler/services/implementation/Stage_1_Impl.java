@@ -1,10 +1,10 @@
 package com.example.CBLC_Handler.services.implementation;
 
-import com.amazonaws.SdkClientException;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.*;
 import com.example.CBLC_Handler.config.S3config;
 import com.example.CBLC_Handler.services.Stage_1_Service;
+import com.example.CBLC_Handler.services.helpers.FileMerger;
 import com.example.CBLC_Handler.services.helpers.Notifier;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
@@ -18,9 +18,9 @@ import org.springframework.stereotype.Service;
 import org.redisson.api.RLock;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -56,12 +56,14 @@ public class Stage_1_Impl implements Stage_1_Service {
     private RedissonClient redissonClient;
 
     @Scheduled(fixedDelayString = "${poll.frequency.millis}")
-    public void getLatestFileFromS3() {
+    public void getLatestFileFromS3AndLeadCrawl(String filename) throws IOException {
         String inputPath = null;
         String outputPath = null;
 
 //        HashMap<String, String> desgMap = mariaDbConnector.connectDb(MARIADB_DESG_COLUMN);
 //        HashMap<String, String> mailMap = mariaDbConnector.connectDb(MARIADB_MAIL_COLUMN);
+
+        //check for specific filename in s3?
 
         AmazonS3 s3Client;
         String latestFile = null;
@@ -162,9 +164,11 @@ public class Stage_1_Impl implements Stage_1_Service {
 
     private void startCrawling(String inputPath,String outputPath,String latestFile)
     {
-
     }
 
+    public static void FileMergerLeadCrawl(String outputPath, String filename, int parts) throws IOException {
+        FileMerger.MergeFiles(outputPath, filename, "", parts);
+    }
 }
 
 

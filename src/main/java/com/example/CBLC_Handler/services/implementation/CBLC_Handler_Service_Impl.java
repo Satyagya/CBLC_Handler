@@ -41,16 +41,48 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
     @Autowired
     private Stage_1_Impl stage1;
 
+    @Autowired
+    private Stage_2_Impl stage2;
+
 
     @Override
-    public void start_Process(String inputFilePath, int stage) {
+    public void start_Process(String inputFilePath, int stage_start, int stage_end) {
         try
         {
             //file_name_formatter(inputFilePath);
             String awsBucketInputFile="";
             s3_functions.upload_File_In_S3(inputFilePath, awsBucketInputFile);
-            store_FileName_In_Input_Files_Table(inputFilePath, stage);
-            stage0.divide_FileInParts_Store_InS3And_PartsOfInputFiles(inputFilePath);
+            store_FileName_In_Input_Files_Table(inputFilePath, stage_start, stage_end);
+            String filename = get_FileName(inputFilePath);
+            switch(stage_start)
+            {
+                case 0:
+                    stage0.divide_FileInParts_Store_InS3And_PartsOfInputFiles(inputFilePath);
+                    stage1.getLatestFileFromS3AndLeadCrawl(filename);
+                    if(stage_end==1)
+                    {
+                        String outputPath ="";
+                        Stage_1_Impl.FileMergerLeadCrawl(outputPath, filename, get_NoOfParts(inputFilePath));
+                        break;
+                    }
+                    stage2.getLatestFileFromS3AndDomainChecker(filename);
+                    break;
+
+                case 1:
+                    stage1.getLatestFileFromS3AndLeadCrawl(filename);
+                    if(stage_end==1)
+                    {
+                        String outputPath ="";
+                        Stage_1_Impl.FileMergerLeadCrawl(outputPath, filename, get_NoOfParts(inputFilePath));
+                        break;
+                    }
+                    stage2.getLatestFileFromS3AndDomainChecker(filename);
+                    break;
+
+                case 2:
+                    stage2.getLatestFileFromS3AndDomainChecker(filename);
+                    break;
+            }
         }
         catch(Exception e)
         {
@@ -58,15 +90,15 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
         }
     }
 
-    void store_FileName_In_Input_Files_Table(String inputFilePath, int stage)
+    void store_FileName_In_Input_Files_Table(String inputFilePath, int stage_start, int stage_end)
     {
         String fileName = get_FileName(inputFilePath);
         Integer noOfParts = get_NoOfParts(inputFilePath);
         Input_Files input_file = new Input_Files();
         input_file.setInput_FileName(fileName);
         input_file.setNo_Of_Parts(noOfParts);
-        input_file.setStage(stage);
-        input_file.setStage_Required(stage);
+        input_file.setStage_start(stage_start);
+        input_file.setStage_end(stage_end);
         input_file.setUpload_Date(LocalDateTime.now().toString());
         input_filesRepository.save(input_file);
     }

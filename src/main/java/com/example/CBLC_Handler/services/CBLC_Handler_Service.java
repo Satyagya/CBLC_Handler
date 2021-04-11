@@ -2,5 +2,5 @@ package com.example.CBLC_Handler.services;
 
 public interface CBLC_Handler_Service {
 
-    void start_Process(String inputFilePath, int stage);
+    void start_Process(String inputFilePath, int stage_start, int stage_end);
 }

@@ -13,6 +13,10 @@ public class S3_Functions {
     @Autowired
     private S3config s3config;
 
+    public S3_Functions(S3config s3config) {
+        this.s3config = s3config;
+    }
+
     public void upload_File_In_S3(String filePath, String s3BucketPath)
     {
         try

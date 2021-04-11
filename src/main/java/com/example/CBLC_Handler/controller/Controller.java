@@ -18,8 +18,9 @@ public class Controller {
     {
         //@RequestParam("inputFilePath") String inputFilePath , int stage
         String inputFilePath = "";
-        int stage = 6; //default
-        cblc_handler_service.start_Process(inputFilePath, stage);
+        int stage_start = 0; //default
+        int stage_end = 0; //default
+        cblc_handler_service.start_Process(inputFilePath, stage_start, stage_end);
     }
 }
 
