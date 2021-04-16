@@ -34,6 +34,9 @@ public class Input_Files {
     @Column(name = "START_STAGE")
     private  Integer stage_start;
 
+    @Column(name = "CURRENT_STAGE")
+    private  Integer stage_curr;
+
     @Column(name = "END_STAGE")
     private  Integer stage_end;
 
@@ -89,6 +92,14 @@ public class Input_Files {
 
     public void setStage_end(Integer stage_end) {
         this.stage_end = stage_end;
+    }
+
+    public Integer getStage_curr() {
+        return stage_curr;
+    }
+
+    public void setStage_curr(Integer stage_curr) {
+        this.stage_curr = stage_curr;
     }
 
     public String getUpload_Date() {

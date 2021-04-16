@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dea82ef3-f3b2-4a0c-a32b-368e5b0a5d8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/CsvParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/CsvVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/FileMerger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Input_Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/entities/Input_Files.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/CBLC_Handler_Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/CBLC_Handler_Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/S3_Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/S3_Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/FileMerger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/FileMerger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/FileNameFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/helpers/FileNameFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/CBLC_Handler_Service_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/CBLC_Handler_Service_Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_0_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_0_Impl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_1_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_1_Impl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_2_Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/CBLC_Handler/services/implementation/Stage_2_Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

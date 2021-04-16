@@ -6,9 +6,12 @@ import com.example.CBLC_Handler.entities.Input_Files;
 import com.example.CBLC_Handler.repositories.Input_FilesRepository;
 import com.example.CBLC_Handler.services.CBLC_Handler_Service;
 //import com.example.CBLC_Handler.services.helpers.Notifiers;
+import com.example.CBLC_Handler.services.helpers.FileMerger;
+import com.example.CBLC_Handler.services.helpers.FileNameFormatter;
 import com.example.CBLC_Handler.services.helpers.S3_Functions;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -23,6 +26,9 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
     @Autowired
     private S3config s3config;
 
+    @Value("${aws.bucket.name.FULL_INPUT_FILE_PATH}")
+    private String FULL_INPUT_FILE_PATH;
+
 //    @Autowired
 //    private Notifiers notifier;
 //
@@ -33,7 +39,16 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
     private Input_FilesRepository input_filesRepository;
 
     @Autowired
+    private Input_Files input_files;
+
+    @Autowired
     private S3_Functions s3_functions;
+
+    @Autowired
+    private FileNameFormatter file_name_formatter;
+
+    @Autowired
+    private FileMerger fileMerger;
 
     @Autowired
     private Stage_0_Impl stage0;
@@ -49,39 +64,41 @@ public class CBLC_Handler_Service_Impl implements CBLC_Handler_Service {
     public void start_Process(String inputFilePath, int stage_start, int stage_end) {
         try
         {
-            //file_name_formatter(inputFilePath);
-            String awsBucketInputFile="";
-            s3_functions.upload_File_In_S3(inputFilePath, awsBucketInputFile);
+            s3_functions.upload_File_In_S3(inputFilePath, FULL_INPUT_FILE_PATH);
             store_FileName_In_Input_Files_Table(inputFilePath, stage_start, stage_end);
             String filename = get_FileName(inputFilePath);
-            switch(stage_start)
+
+            int curr_stage = stage_start;
+            while(curr_stage<=stage_end)
             {
-                case 0:
-                    stage0.divide_FileInParts_Store_InS3And_PartsOfInputFiles(inputFilePath);
-                    stage1.getLatestFileFromS3AndLeadCrawl(filename);
-                    if(stage_end==1)
-                    {
-                        String outputPath ="";
-                        Stage_1_Impl.FileMergerLeadCrawl(outputPath, filename, get_NoOfParts(inputFilePath));
+                switch(curr_stage)
+                {
+                    case 0:
+                        stage0.divide_FileInParts_Store_InS3And_PartsOfInputFiles(inputFilePath);
                         break;
-                    }
-                    stage2.getLatestFileFromS3AndDomainChecker(filename);
-                    break;
 
-                case 1:
-                    stage1.getLatestFileFromS3AndLeadCrawl(filename);
-                    if(stage_end==1)
-                    {
-                        String outputPath ="";
-                        Stage_1_Impl.FileMergerLeadCrawl(outputPath, filename, get_NoOfParts(inputFilePath));
+                    case 1:
+                        stage1.SendFileForLeadCrawl(filename);
                         break;
-                    }
-                    stage2.getLatestFileFromS3AndDomainChecker(filename);
-                    break;
 
-                case 2:
-                    stage2.getLatestFileFromS3AndDomainChecker(filename);
-                    break;
+                    case 2:
+
+                    case 3:
+
+                    case 4:
+
+                    case 5:
+
+                    case 6:
+                }
+                file_name_formatter.name_formatter(filename,curr_stage);
+                curr_stage++;
+                input_files.setStage_curr(curr_stage);
+            }
+            if(curr_stage==1||curr_stage==3)
+            {
+                fileMerger.MergeFiles(filename,curr_stage);
+                //send email
             }
         }
         catch(Exception e)

@@ -1,11 +1,15 @@
 package com.example.CBLC_Handler.services.implementation;
 
+import com.example.CBLC_Handler.entities.Parts_Of_Input_Files;
+import com.example.CBLC_Handler.repositories.Input_FilesRepository;
+import com.example.CBLC_Handler.repositories.Parts_Of_Input_FilesRepository;
 import com.example.CBLC_Handler.services.Stage_0_Service;
 import com.example.CBLC_Handler.services.helpers.S3_Functions;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import com.amazonaws.services.s3.AmazonS3;
 import com.example.CBLC_Handler.entities.Input_Files;
@@ -25,6 +29,15 @@ public class Stage_0_Impl implements Stage_0_Service {
 
     @Autowired
     S3_Functions s3_functions;
+
+    @Value("${aws.bucket.name.PART_INPUT_FILE_PATH}")
+    private String PART_INPUT_FILE_PATH;
+
+    @Autowired
+    private Input_FilesRepository input_filesRepository;
+
+    @Autowired
+    private Parts_Of_Input_FilesRepository parts_of_input_filesRepository;
 
     void divide_FileInParts_Store_InS3And_PartsOfInputFiles(String inputFilePath)
     {
@@ -61,10 +74,8 @@ public class Stage_0_Impl implements Stage_0_Service {
     {
         try
         {
-            String updatedFileName = get_FileName(inputFilePath);
-            updatedFileName = updatedFileName + "_P" + String.valueOf(partNo);
-
-            FileWriter partFile = new FileWriter(updatedFileName);
+            String partFilePath = pathToSavePartFile + "/p" + partNo + "_" + get_FileName(inputFilePath) ;
+            FileWriter partFile = new FileWriter(partFilePath);
             CSVWriter writer = new CSVWriter(partFile);
             String[] header = {"NAME", "WEBSITE", "PROFILE_URL", "FIRST_NAME", "LAST_NAME", "MATCH_DESIGNATION", "EMAIL_ID"};
             writer.writeNext(header);
@@ -77,9 +88,9 @@ public class Stage_0_Impl implements Stage_0_Service {
                 countOfRows++;
             }
             System.out.println("rows inserted in the part file {}"+ countOfRows);
+            s3_functions.upload_File_In_S3(partFilePath,PART_INPUT_FILE_PATH);
 
-            s3_functions.upload_File_In_S3("","");
-
+            store_Part_FileName_In_Parts_Of_Input_Files_Table(partFilePath);
         }
         catch(Exception e)
         {
@@ -87,10 +98,30 @@ public class Stage_0_Impl implements Stage_0_Service {
         }
     }
 
+    void store_Part_FileName_In_Parts_Of_Input_Files_Table(String partFilePath)
+    {
+        try
+        {
+            String fileName = get_FileName(partFilePath);
+            Parts_Of_Input_Files input_file_part = new Parts_Of_Input_Files();
+            input_file_part.setInput_FileName_With_part(fileName);
+            input_file_part.setLc_Status("SC");
+            input_file_part.setDc_Status("NA");
+            input_file_part.setEg_Found_Status("NA");
+            input_file_part.setEg_NotFound_Status("NA");
+            parts_of_input_filesRepository.save(input_file_part);
+
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("cannot store part file in database Table");
+        }
+    }
+
     String get_FileName(String inputFilePath)
     {
         String[] partsOfPath = inputFilePath.split("/");
-        //FORMAT FOR FILE NAME????
         return partsOfPath[partsOfPath.length-1];
     }
 
