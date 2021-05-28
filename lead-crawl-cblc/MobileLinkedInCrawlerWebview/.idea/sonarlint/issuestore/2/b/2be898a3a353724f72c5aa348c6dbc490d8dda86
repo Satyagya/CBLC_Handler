@@ -1,0 +1,30 @@
+
+E
+java:S1481T"/Remove this unused "uploadpath" local variable.(¬òå¬
+N
+java:S1481",Remove this unused "newFile" local variable.(øÚßúÿÿÿÿ8Éµá†«.
+T
+java:S1854T">Remove this useless assignment to local variable "uploadpath".(¬òå¬
+k	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(……Ê´øÿÿÿÿ
+v
+java:S1450!"[Remove the "statusUpdate" field and declare it as a local variable in the relevant methods.(ÁÚ»ˆúÿÿÿÿ
+S
+java:S1197"8Move the array designator from the variable to the type.(ÖËÚğûÿÿÿÿ
+J
+java:S1066M"/Merge this if statement with the enclosing one.(Ñˆ¾şÿÿÿÿ
+\	java:S899"BDo something with the "boolean" value returned by "createNewFile".(øÚßúÿÿÿÿ
+d
+java:S4042t"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(¨ïşÍ
+]
+java:S1854";Remove this useless assignment to local variable "newFile".(øÚßúÿÿÿÿ8Éµá†«.
+R
+java:S1068!"0Remove this unused "statusUpdate" private field.(ÁÚ»ˆúÿÿÿÿ8íùÉæ«.
+C
+java:S1481Y"-Remove this unused "success1" local variable.(Ï§ÿ×
+R	java:S899Y"=Do something with the "boolean" value returned by "renameTo".(Ï§ÿ×
+o
+java:S1450"ZRemove the "countUpdate" field and declare it as a local variable in the relevant methods.(’Ãïp
+R
+java:S1854Y"<Remove this useless assignment to local variable "success1".(Ï§ÿ×
+\
+java:S1075^"ARefactor your code to get this URI from a customizable parameter.(«ñ¯Áıÿÿÿÿ

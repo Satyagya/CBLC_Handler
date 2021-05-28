@@ -1,0 +1,22 @@
+FILE_EXTENSION = ['xlsx']
+FILES_DIRECTORY = 'Files'
+NULL = 'null'
+SLASH = '/'
+UNDERSCORE = '_'
+LINKEDIN_URL_REQUEST = "LINKEDIN_URL_CRAWL_REQUEST_"
+REQUEST_ID_PATH = "count_files/requestId.txt"
+CSV_EXTENSION = '.csv'
+EMPTY_FILENAME = 'EMPTY_FILENAME'
+WRONG_FILE_EXTENSION = 'WRONG_FILE_EXTENSION'
+ALL_CONDITIONS_CORRECT = 'ALL_CONDITIONS_CORRECT'
+WRONG_FILE_EXTENSION_RESPONSE = "The file you are trying to upload has extension other than XLSX. "+\
+                                "Please upload a file with a XLSX extension and Retry."
+EMPTY_FILENAME_RESPONSE = "You have not provided any file to upload. Please upload a file and Retry."
+BASE_PATH = '/Users/satyagtaparasharkumar/Documents/CBLC_Handler/lead-crawl-cblc/CBLC/front_end_gor_crawling/Files/'
+XLSX_EXTENSION = '.xlsx'
+WRONG_HEADER = "Wrong file header"
+EMPTY_COUNTRY_RESPONSE = "Please fill Country field"
+EMPTY_EMAIL_RESPONSE = "Please fill Email field"
+EMPTY_STAGE_RESPONSE = "Please select one of the options"
+INVALID_EMAIL_RESPONSE = "Email entered is not valid"
+INVALID_COUNTRY_RESPONSE = "Please check country spelling"

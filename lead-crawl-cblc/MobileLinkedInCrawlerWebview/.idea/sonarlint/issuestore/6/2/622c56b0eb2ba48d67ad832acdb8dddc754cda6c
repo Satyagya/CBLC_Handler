@@ -1,0 +1,52 @@
+
+F
+java:S1148¥"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²—÷·³.
+[	java:S106ë"9Replace this use of System.out or System.err by a logger.(¡ÇüÊùÿÿÿÿ8–è®®.
+F
+java:S1148¶"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²—÷·³.
+[	java:S106®"9Replace this use of System.out or System.err by a logger.(Ğ¸¹ûùÿÿÿÿ8²—÷·³.
+F
+java:S1148«"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²—÷·³.
+q	java:S1160"PRename this field "html_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ£Ï¨ÿÿÿÿÿ8óÄÚ®«.
+[	java:S106ù"9Replace this use of System.out or System.err by a logger.(æŠé½üÿÿÿÿ8²—÷·³.
+[	java:S106î"9Replace this use of System.out or System.err by a logger.(ñş¢Œûÿÿÿÿ8²—÷·³.
+F
+java:S1148Ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²—÷·³.
+[	java:S106¦"9Replace this use of System.out or System.err by a logger.(÷¹âõÿÿÿÿÿ8²—÷·³.
+`
+java:S2259¯"BA "NullPointerException" could be thrown; "fOut" is nullable here.(£Èàò8²—÷·³.
+[	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(¸Ûë—üÿÿÿÿ8²—÷·³.
+K
+java:S1185È"(Remove this method to simply inherit it.(ÛÊÄµÿÿÿÿÿ8²—÷·³.
+F
+java:S1148—"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²—÷·³.
+F
+java:S1148±"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²—÷·³.
+n
+java:S1192ô"PDefine a constant instead of duplicating this literal "/MyAlbums/sleep" 3 times.(¸­Ú»8²—÷·³.
+h
+java:S1192ô"JDefine a constant instead of duplicating this literal "sleep.txt" 3 times.(¸­Ú»8²—÷·³.
+d
+java:S2259Ô"AA "NullPointerException" could be thrown; "fin" is nullable here.(µö¹šúÿÿÿÿ8²—÷·³.
+ª
+java:S2681»"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(ääÌÿÿÿÿÿ8²—÷·³.
+w	java:S116?"[Rename this field "SHOULD_OVER_RIDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¨şŠ8«Ê³³¬.
+x	java:S116@"WRename this field "PACKAGE_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡»¦Ğûÿÿÿÿ8¡£Ìÿ¶.
+p
+java:S3776é"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(à³±æ8²—÷·³.
+Y	java:S125“"<This block of commented-out lines of code should be removed.(—¡ª¼8‘İ‹ ¸.
+^	java:S125š"<This block of commented-out lines of code should be removed.(š©…Ñùÿÿÿÿ8Â—Ë·.
+]	java:S125|"<This block of commented-out lines of code should be removed.(±ÌÚÃûÿÿÿÿ8ˆßŒ ¸.
+G
+java:S1172¤"*Remove this unused method parameter "url".(û®«S8²—÷·³.
+Z	java:S106l"9Replace this use of System.out or System.err by a logger.(³÷âÿÿÿÿÿÿ8²—÷·³.
+V	java:S106û"9Replace this use of System.out or System.err by a logger.(€À›å8šåõÄÖ.
+[
+java:S1197"8Move the array designator from the variable to the type.(’…©áıÿÿÿÿ8šåõÄÖ.
+i
+java:S3027î"FPut single-quotes around '&' to use the faster "indexOf(char)" method.(ÍÒÍµúÿÿÿÿ8šåõÄÖ.
+V
+java:S1197ò"8Move the array designator from the variable to the type.(èáÒ‰8šåõÄÖ.
+[
+java:S1197û"8Move the array designator from the variable to the type.(œñ²àÿÿÿÿÿ8šåõÄÖ.
+^	java:S125Õ"<This block of commented-out lines of code should be removed.(ş”Ö…ùÿÿÿÿ8šåõÄÖ.

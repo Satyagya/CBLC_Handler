@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+        <div class="jumbotron" style="position: relative;color: #edeef7;">
+            <h1 style="font-family:'sans-serif', Geneva, Verdana, sans-serif;color: #7868e6;">Upload Company list CSV file</h1>
+           <form id="upload-form" method="POST" enctype="multipart/form-data" action="{{ url_for('startCrawl') }}">
+                <p><input type="file" name="file" style="color: #7868e6;"></p>
+                <h5 style="color: #7868e6;">Enter your Email</h5>
+                <p><input type="text" name="email"></p>
+                <input type="radio" name="stages" id="option1" value="0"> <label style="color:#7868e6;">Lead Generation </label> </input><br>
+                <input type="radio" name="stages" id="option2" value="1"> <label style="color:#7868e6;">Email Generation </label></input><br>
+                <input type="radio" name="stages" id="option2" value="2"> <label style="color:#7868e6;">Both</label></input><br>
+                <p><input type="submit" value="Submit" style="margin-top: 15px;color:white;"></p>
+            </form>
+
+            <hr class="my-3">
+            <p style="color: red">Please check that the file to be uploaded is a XLSX file.</p>
+        </div>
+
+{% endblock %}
+
+

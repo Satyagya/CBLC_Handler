@@ -1,0 +1,54 @@
+
+[
+java:S1197—"8Move the array designator from the variable to the type.(œñ²àÿÿÿÿÿ8ñÛ¤ªÔ.
+K
+java:S1068:")Remove this unused "html_" private field.(Ð£Ï¨ÿÿÿÿÿ8„»•©Ë.
+F
+java:S1148Þ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8°ç½àÐ.
+[	java:S106¾"9Replace this use of System.out or System.err by a logger.(ŸŠ­úÿÿÿÿÿ8°ç½àÐ.
+R
+java:S10689"5Remove this unused "EXTENSION_VERSION" private field.(¸ä«ë8„»•©Ë.
+w	java:S116I"[Rename this field "SHOULD_OVER_RIDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¨þŠ8„»•©Ë.
+d
+java:S2259§"AA "NullPointerException" could be thrown; "fin" is nullable here.(µö¹šúÿÿÿÿ8°ç½àÐ.
+t
+java:S14505"WRemove the "sRuntime" field and declare it as a local variable in the relevant methods.(éáÞµ8ùø‹žÌ.
+x	java:S116J"WRename this field "PACKAGE_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡»¦Ðûÿÿÿÿ8„»•©Ë.
+G
+java:S10686"*Remove this unused "LOGTAG" private field.(Ž‘É¯8Ò†§©Ë.
+n
+java:S2095è"PUse try-with-resources or close this "OutputStreamWriter" in a "finally" clause.(áÀšÞ8°ç½àÐ.
+n
+java:S1192Ä"PDefine a constant instead of duplicating this literal "/MyAlbums/sleep" 3 times.(¸­Ú»8öµ£ÓÒ.
+q	java:S116:"PRename this field "html_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ð£Ï¨ÿÿÿÿÿ8„»•©Ë.
+F
+java:S1148ï"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8°ç½àÐ.
+F
+java:S1604¹"(Make this anonymous inner class a lambda(†£°î8°ç½àÐ.
+p
+java:S3776»"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(°»˜¼8°ç½àÐ.
+¤
+java:S1186á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ï»­°ûÿÿÿÿ8ÌŽŒžÌ.
+^	java:S125ó"<This block of commented-out lines of code should be removed.(õó­Ëûÿÿÿÿ8èÝœ¼Ð.
+v	java:S116K"URename this field "USER_AGENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©þÌèùÿÿÿÿ8Í¿îÔË.
+[	java:S106”"9Replace this use of System.out or System.err by a logger.(³÷âÿÿÿÿÿÿ8„»•©Ë.
+V
+java:S1197Ž"8Move the array designator from the variable to the type.(èáÒ‰8ñÛ¤ªÔ.
+Ÿ
+java:S1186Ü"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œ“Ÿí8ÌŽŒžÌ.
+F
+java:S1604â"(Make this anonymous inner class a lambda(†£°î8°ç½àÐ.
+h
+java:S1192Ä"JDefine a constant instead of duplicating this literal "sleep.txt" 3 times.(¸­Ú»8öµ£ÓÒ.
+i
+java:S3027Š"FPut single-quotes around '&' to use the faster "indexOf(char)" method.(ÍÒÍµúÿÿÿÿ8ñÛ¤ªÔ.
+`
+java:S2259ì"BA "NullPointerException" could be thrown; "fOut" is nullable here.(£Èàò8°ç½àÐ.
+m	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†°Œ?8°ç½àÐ.
+F
+java:S1148æ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8°ç½àÐ.
+[	java:S106Â"9Replace this use of System.out or System.err by a logger.(¿‰Ø»ÿÿÿÿÿ8ÌŽŒžÌ.
+V
+java:S1117½"9Rename "html_" which hides the field declared at line 58.(†°Œ?8°ç½àÐ.
+[
+java:S1197×"8Move the array designator from the variable to the type.(’…©áýÿÿÿÿ8°ç½àÐ.

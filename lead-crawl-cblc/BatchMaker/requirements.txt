@@ -1,0 +1,4 @@
+botocore==1.16.19
+boto3==1.13.19
+apscheduler==3.6.3
+slackclient==2.7.1

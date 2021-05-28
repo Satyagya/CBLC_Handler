@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="jumbotron" style="color: #edeef7;">
+    <h1 style="font-family:'sans-serif', Geneva, Verdana, sans-serif; color:#7868e6; text-align: center;">File Uploaded Successfully !!!</h1>
+    <form id="upload-form" action="{{ url_for('index') }}" enctype="multipart/form-data">
+        <p style="display: flex; align-items: center;justify-content: center; margin-top: 30px;"><button class="btn"><i class="fa fa-home"></i> Home</button></p>
+    </form>
+</div>
+
+{% endblock %}

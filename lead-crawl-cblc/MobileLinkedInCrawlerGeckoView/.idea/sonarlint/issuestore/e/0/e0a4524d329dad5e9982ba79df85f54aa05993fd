@@ -1,0 +1,48 @@
+
+l	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¶ô€úÿÿÿÿ
+`
+java:S1192@"JDefine a constant instead of duplicating this literal "sleep.txt" 5 times.(ûƒÎâ
+Y
+java:S2696À"6Make the enclosing method "static" or remove this set.(åß¥Üşÿÿÿÿ8İˆÇÌÊ.
+v	java:S116+"bRename this field "STORAGE_PERMISSION_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ¶¡^
+O
+java:S1197½"8Move the array designator from the variable to the type.(õ ñ
+u
+java:S3012À"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(åß¥Üşÿÿÿÿ
+T	java:S106¶"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
+]
+java:S1126à"AReplace this if-then-else statement by a single return statement.(ÑÎ¤½ùÿÿÿÿ
+T	java:S106Ä"9Replace this use of System.out or System.err by a logger.(‰Éêµÿÿÿÿÿ
+T
+java:S2696Â"6Make the enclosing method "static" or remove this set.(Õó³8İˆÇÌÊ.
+?
+java:S1481²")Remove this unused "list" local variable.(Ìö¼
+>
+java:S1604T"(Make this anonymous inner class a lambda(„ÑñŒ
+\
+java:S2142Y"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+>
+java:S1148Z"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?
+java:S1604¤"(Make this anonymous inner class a lambda(†£°î
+S
+java:S2696D"6Make the enclosing method "static" or remove this set.(ƒ¸ŞÛ8İˆÇÌÊ.
+V
+java:S2259½"?A "NullPointerException" could be thrown; "s" is nullable here.(õ ñ
+N
+java:S1854²"8Remove this useless assignment to local variable "list".(Ìö¼
+T
+java:S2696¾"6Make the enclosing method "static" or remove this set.(†¹8İˆÇÌÊ.
+]
+java:S2259Ÿ"AA "NullPointerException" could be thrown; "fin" is nullable here.(µö¹šúÿÿÿÿ
+^
+java:S1192C"HDefine a constant instead of duplicating this literal "profile" 3 times.(˜Ù®É
+f
+java:S1192@"PDefine a constant instead of duplicating this literal "/MyAlbums/sleep" 6 times.(ûƒÎâ
+l	java:S117Ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¡â£ûÿÿÿÿ
+s
+java:S3252ª"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(ß„Ïıÿÿÿÿ
+e
+java:S4042Ì"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(¨ïşÍ
+m
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¨Œşÿÿÿÿ

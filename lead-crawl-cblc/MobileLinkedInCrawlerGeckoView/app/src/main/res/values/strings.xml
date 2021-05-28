@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GeckoView</string>
+    <string name="getpayload">GetPayLoad</string>
+    <string name="Add">add</string>
+    <string name="enter_url">Enter Url</string>
+    <string name="next">next</string>
+    <string name="flight_toggle">Flight Toggle</string>
+    <string name="url_count">url count</string>
+</resources>

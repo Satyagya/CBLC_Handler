@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="jumbotron" style="background:rgb(224, 59, 59) !important">
+    <h1 style="font-family:'sans-serif', Geneva, Verdana, sans-serif;">Upload Company list CSV file</h1>
+    <form id="upload-form" method="POST" action="{{ url_for('uploadCsvFile') }}" enctype="multipart/form-data">
+        <p><input type="file" name="file">
+            <label for="products">Choose a product:</label>
+            <select id="product_types" name="product_types">
+                <option value="null">Null</option>
+                <!-- <option value="phBD">pH-BD</option>
+                <option value="engatiBD">Engati-BD</option>
+                <option value="engatiWhitelabel">Engati-WhiteLabel</option>
+                <option value="engatiPartners">Engati-Partners</option> -->
+                {% for o in data %}
+                <option value="{{ o }}">{{ o }}</option>
+                {% endfor %}
+            </select>
+        </p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+    <hr class="my-4">
+    <h4 style="font-family:'sans-serif', Geneva, Verdana, sans-serif;">Error Occurred while uploading "{{filename}}" file.</h4>
+    <h5 style="font-family:'sans-serif', Geneva, Verdana, sans-serif;">Reason: {{response}}</h5>
+</div>
+
+{% endblock %}

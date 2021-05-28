@@ -1,0 +1,30 @@
+
+\
+java:S1858"A"getName" returns a string, there's no need to call "toString()".(à¼Æòÿÿÿÿÿ
+E
+java:S2093_"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+j
+java:S2095Œ"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(¡¢“ìùÿÿÿÿ
+@
+java:S5411$"*Use the primitive boolean expression here.(áÇå 
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Ì’æú
+[
+java:S3027f"FPut single-quotes around '/' to use the faster "indexOf(char)" method.(¢ÜÁK
+>	java:S108}")Either remove or fill this block of code.(ï­£Ä
+Q	java:S125"<This block of commented-out lines of code should be removed.(ä©ã´
+\
+java:S2147‘"ECombine this catch with the one at line 143, which has the same body.(Ãôþ•
+d
+java:S2095!"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(–ž¯­
+l
+java:S2095I"QUse try-with-resources or close this "BufferedInputStream" in a "finally" clause.(œ¢Ùîÿÿÿÿÿ
+<
+java:S1075%"&Remove this hard-coded path-delimiter.(‹ðÝ³
+>	java:S1083")Either remove or fill this block of code.(ï­£Ä
+S
+java:S1197G"8Move the array designator from the variable to the type.(ä¼Ïäøÿÿÿÿ
+i
+java:S3008"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à¼Æòÿÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

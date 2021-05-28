@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.webload"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:25:5-80
+11-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:25:22-77
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:26:5-81
+12-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:26:22-78
+13    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+13-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:27:5-79
+13-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:27:22-76
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:28:5-79
+14-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:28:22-76
+15    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+15-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:29:5-31:47
+15-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:30:9-57
+16    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+16-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:32:5-34:47
+16-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:33:9-64
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:36:5-67
+17-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:36:22-64
+18
+19    <application
+19-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:5:5-24:19
+20        android:name="com.example.webload.App"
+20-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:6:9-28
+21        android:allowBackup="true"
+21-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:7:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] /Users/namanbhatt/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:8:9-43
+25        android:label="@string/app_name"
+25-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:9:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:10:9-54
+27        android:supportsRtl="true"
+27-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:11:9-35
+28        android:testOnly="true"
+29        android:theme="@style/AppTheme"
+29-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:12:9-40
+30        android:usesCleartextTraffic="true" >
+30-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:13:9-44
+31        <activity android:name="com.example.webload.NewActivity" />
+31-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:14:9-49
+31-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:14:19-46
+32        <activity android:name="com.example.webload.GetPayloadActivity" />
+32-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:15:9-56
+32-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:15:19-53
+33        <activity android:name="com.example.webload.IntermediateActivity" >
+33-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:16:9-22:20
+33-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:16:19-55
+34            <intent-filter>
+34-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:17:13-21:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:18:17-69
+35-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:18:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:20:17-77
+37-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:20:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity android:name="com.example.webload.MainActivity" />
+40-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:23:9-50
+40-->/Users/namanbhatt/Desktop/CompanyProject/WebLoad-2/app/src/main/AndroidManifest.xml:23:19-47
+41    </application>
+42
+43</manifest>

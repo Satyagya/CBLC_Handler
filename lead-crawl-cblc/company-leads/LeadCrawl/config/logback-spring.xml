@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<springProperty name="logging.path" source="logging.path"
+									defaultValue="/var/log/automi/lead-crawl"/>
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+			<customFields>{"app_name":"lead-crawl-service","log_type":"app"}</customFields>
+			<timeZone>UTC</timeZone>
+
+		</encoder>
+	</appender>
+
+	<appender name="dailyRollingFileAppender"
+						class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${logging.path}/lead-crawl-service.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<FileNamePattern>${logging.path}/lead-crawl-service.%d{dd-MM-yyyy}.log.gz</FileNamePattern>
+
+			<!-- keep 15 days' worth of history -->
+			<maxHistory>15</maxHistory>
+		</rollingPolicy>
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+			<customFields>{"app_name":"lead-crawl-service","log_type":"app"}</customFields>
+			<includeCallerData>true</includeCallerData>
+			<timeZone>UTC</timeZone>
+
+		</encoder>
+	</appender>
+
+	<logger name="com.engati.rpa" level="INFO" additivity="false">
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="dailyRollingFileAppender" />
+	</logger>
+
+	<logger name="com.example.LeadCrawl" level="INFO" additivity="false">
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="dailyRollingFileAppender" />
+	</logger>
+
+	<root level="ERROR">
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="dailyRollingFileAppender" />
+	</root>
+
+</configuration>
